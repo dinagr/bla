@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Visrtual Store</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a [routerLink] = "['/product-list']">Product List</a></li> 
+      <li><a [routerLink] = "['/add-products']">Start Shopping</a></li> 
+      <li><a [routerLink] = "['/shopping-cart']"><span class="glyphicon glyphicon-shopping-cart"></span> My Shopping Cart</a></li> 
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink] = "['/users-list']">User Managment</a></li>
+        <li><a [routerLink] = "['/log-out']"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        <li><a href="#">{{loggedUser}}</a></li>
+    </ul>
+  </div>
+</nav>

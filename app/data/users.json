@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "userName": "admin",
+        "firstName": "Dina",
+        "lastName": "Ferdinskoif",
+        "email": "dina.ferdinskoif@codeo.co.il",
+        "password": "123",
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 2,
+        "userName": "bob123",
+        "firstName": "Bob",
+        "lastName": "Bobby",
+        "email": "bob@gmail.com",
+        "password": "123",
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 3,
+        "userName": "john",
+        "firstName": "John",
+        "lastName": "Smith",
+        "email": "john@gmail.com",
+        "password": "123",
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 4,
+        "userName": "david",
+        "firstName": "David",
+        "lastName": "Grin",
+        "email": "david@gmail.com",
+        "password": "123",
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 5,
+        "userName": "arki11",
+        "firstName": "Arik",
+        "lastName": "Ran",
+        "email": "arik@gmail.com",
+        "password": "123",
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 6,
+        "userName": "lisa34",
+        "firstName": "Lisa",
+        "lastName": "Rein",
+        "email": "lisa@yahoo.com",
+        "password": "123",
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 7,
+        "userName": "Rina2",
+        "firstName": "Rina",
+        "lastName": "Gal",
+        "email": "rina@yahoo.com",
+        "password": "123",
+        "edit": false,
+        "deleted": false
+    }
+]

@@ -1,0 +1,76 @@
+<nav-bar></nav-bar>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h1>
+                    Product List
+                </h1>
+            </div>
+            <div>
+                Filter by product name:
+                <input type='text' [(ngModel)]='listFilter' />
+            </div>
+            <br>
+            <div>
+                Filter by minimum price range:
+                <input type='text' [(ngModel)]='minPrice' />
+            </div>
+            <br>
+            <div>
+                Filter by maximum price range:
+                <input type='text' [(ngModel)]='maxPrice' />
+            </div>
+            <br>
+            <div class="alert alert-success" *ngIf="message">
+                {{message}}
+            </div>
+            <!--div class="alert alert-success" *ngIf="errorMessage">
+                {{errorMessage}}
+            </div-->
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody *ngFor= "let product of products | productFilter:listFilter | productFilterMinPricePipe:minPrice |productFilterMaxPricePipe:maxPrice">
+                    <tr *ngIf="!product.edit && !product.deleted">    
+                            <td>{{product?.id}}</td>
+                            <td>{{product?.productName}}</td>
+                            <td>{{product?.description}}</td>
+                            <td>{{product?.price}}</td>
+                            <td>
+                                <button class="glyphicon glyphicon-pencil" (click)="editMode(product)">
+                                </button>
+                                <button class="glyphicon glyphicon-remove" (click)="deleteProduct(product)">
+                                </button>
+                            </td>    
+                    </tr>
+                    <tr *ngIf="product.edit && !product.deleted">    
+                            <td><input [(ngModel)] = "product.id"/></td>
+                            <td><input [(ngModel)] = "product.productName"/></td>
+                            <td><input [(ngModel)] = "product.description"/></td>
+                            <td><input [(ngModel)] = "product.price"/></td>
+                            <td>
+                                <button class="glyphicon glyphicon-ok" (click)="saveChanges(product)">
+                                </button>
+                            </td>    
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a role="button" class="btn btn-default" (click)="goToAddProduct()">
+                    Add Product
+                </a>
+                <a role="button" class="btn btn-primary" (click)="clearFilter()">
+                    Clear filter
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

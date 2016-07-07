@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "userId": 1,
+        "isAdmin": 1
+
+    },
+    {
+        "id": 2,
+        "userId": 3,
+        "isAdmin": 0
+
+    },
+    {
+        "id": 3,
+        "userId": 2,
+        "isAdmin": 0
+
+    },
+    {
+        "id": 4,
+        "userId": 7,
+        "isAdmin": 0
+
+    },
+    {
+        "id": 5,
+        "userId": 4,
+        "isAdmin": 0
+
+    },
+    {
+        "id": 6,
+        "userId": 5,
+        "isAdmin": 0
+
+    },
+    {
+        "id": 7,
+        "userId": 6,
+        "isAdmin": 0
+
+    }
+]

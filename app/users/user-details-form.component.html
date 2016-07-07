@@ -1,0 +1,68 @@
+<nav-bar></nav-bar>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">      
+          <form role="form" #userDetailsForm="ngForm">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="firstName" 
+                ngControl="firstName"
+                [(ngModel)]="firstName">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="lastName"
+                ngControl="lastName"
+                [(ngModel)] = "lastName">
+            </div>
+            <div class="form-group">
+              <label for="userName">User Name:</label>
+              <input  
+                class="form-control" 
+                id="userName"
+                ngControl="userName"
+                [(ngModel)] = "userName">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input  
+                class="form-control" 
+                id="email"
+                ngControl="email"
+                [(ngModel)] = "email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input  
+                class="form-control" 
+                id="password"
+                type="password"
+                ngControl="password"
+                [(ngModel)] = "password" [disabled]="editPassword ? false : true">
+                <a (click) = "changeEditingPasswordMode()">{{editPassword ? 'Disable changing Password' : 'Enable changing Password'}}</a>
+            </div>
+            <div class="form-group">
+              <label for="role">Role:</label>
+              <select 
+                class="form-control" 
+                id="role"
+                ngControl="role"
+                [(ngModel)] = "role">
+                <option value="Administrator">Administrator</option>
+                <option value="Regular">Regular</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-default" (click)="saveDatails()">Save</button>
+          </form>
+          <div>
+            <button class="btn btn-default" (click)="goToUsersList()">Back</button>
+          </div>
+      </div>
+    </div>
+</div>

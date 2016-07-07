@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "productName": "computer",
+        "description": "fastcomputer",
+        "price": 245,
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 2,
+        "productName": "car",
+        "description": "redcar",
+        "price": 12000,
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 3,
+        "productName": "tv",
+        "description": "42inc",
+        "price": 400,
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 4,
+        "productName": "watch",
+        "description": "white",
+        "price": 100,
+        "edit": false,
+        "deleted": false
+    },
+    {
+        "id": 5,
+        "productName": "dress",
+        "description": "longdress",
+        "price": 25.5,
+        "edit": false,
+        "deleted": false
+    }
+]

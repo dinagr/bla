@@ -1,0 +1,51 @@
+<h1>Sign up</h1>
+
+<form role="form" #userAddForm="ngForm" (ngSubmit)="addUser()">
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="firstName" 
+      ngControl="firstName"
+      [(ngModel)] = "newUser.firstName">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="lastName"
+      ngControl="lastName"
+      [(ngModel)] = "newUser.lastName">
+  </div>
+  <div class="form-group">
+    <label for="userName">User Name:</label>
+    <input  
+      class="form-control" 
+      id="userName"
+      ngControl="userName"
+      [(ngModel)] = "newUser.userName">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input  
+      class="form-control" 
+      id="email"
+      ngControl="email"
+      [(ngModel)] = "newUser.email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input  
+      class="form-control" 
+      id="password"
+      type="password"
+      ngControl="password"
+      [(ngModel)] = "newUser.password">
+  </div>
+  <button type="submit" class="btn btn-default">Save</button>
+</form>
+<div>
+  <button class="btn btn-default" (click)="goToLogIn()">Log In</button>
+</div>

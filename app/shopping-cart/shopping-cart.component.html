@@ -1,0 +1,47 @@
+<nav-bar></nav-bar>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h1>
+                    Shopping cart
+                </h1>
+            </div>
+            <div class="alert alert-success" *ngIf="message">
+                {{message}}
+            </div>
+            <!--div class="alert alert-success" *ngIf="errorMessage">
+                {{errorMessage}}
+            </div-->
+            <a role="button" class="btn btn-default" (click)="goToAddMyShoppingCart()">
+                    Ny Shopping Cart
+            </a>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Add to cart</th>
+                </tr>
+                </thead>
+                <tbody *ngFor= "let product of shoppingCart">
+                    <tr>    
+                            <td>{{product?.productName}}</td>
+                            <td>{{product?.description}}</td>
+                            <td>{{product?.price}}</td>
+                            <td><input [(ngModel)] = "product.quantity"></td>
+                            <td>{{product?.quantity * product?.price}}</td>
+                            <td>
+                                <button class="glyphicon glyphicon-plus" (click)="addToBasket(product)">
+                                </button>
+                            </td>    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

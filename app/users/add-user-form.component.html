@@ -1,0 +1,68 @@
+<nav-bar></nav-bar>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+      <h1> Add new user</h1>
+      <form role="form" #userAddForm="ngForm" (ngSubmit)="addUser()">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="firstName" 
+            ngControl="firstName"
+            [(ngModel)] = "newUser.firstName">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="lastName"
+            ngControl="lastName"
+            [(ngModel)] = "newUser.lastName">
+        </div>
+        <div class="form-group">
+          <label for="userName">User Name:</label>
+          <input  
+            class="form-control" 
+            id="userName"
+            ngControl="userName"
+            [(ngModel)] = "newUser.userName">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input  
+            class="form-control" 
+            id="email"
+            ngControl="email"
+            [(ngModel)] = "newUser.email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input  
+            class="form-control" 
+            id="password"
+            type="password"
+            ngControl="password"
+            [(ngModel)] = "newUser.password">
+        </div>
+        <div class="form-group">
+          <label for="role">Role:</label>
+          <select 
+            class="form-control" 
+            id="role"
+            ngControl="role"
+            [(ngModel)] = "role">
+            <option value="Administrator">Administrator</option>
+            <option value="Regular">Regular</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default">Save</button>
+      </form>
+      <div>
+        <button class="btn btn-default" (click)="goToUsersList()">Back</button>
+      </div>
+   </div>
+ </div>
+</div>
